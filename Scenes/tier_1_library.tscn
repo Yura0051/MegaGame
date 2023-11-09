@@ -1,30 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqwqyr7uyjmgj"]
+[gd_scene load_steps=3 format=3 uid="uid://cqwqyr7uyjmgj"]
 
 [ext_resource type="Texture2D" uid="uid://yxwmrf3ee8v1" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/Library.png" id="1_upygt"]
+[ext_resource type="PackedScene" uid="uid://ri6ccpx4oloa" path="res://Scenes/btn_plus_minus.tscn" id="2_wdvge"]
 
 [node name="Tier1Library" type="Sprite2D"]
 texture = ExtResource("1_upygt")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 659.0
-offset_top = -260.0
-offset_right = 805.0
-offset_bottom = 24.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
+[node name="BtnPlusMinus" parent="." instance=ExtResource("2_wdvge")]
+offset_left = 680.0
+offset_top = -288.0
+offset_right = 820.0
+offset_bottom = -4.0
 
-[node name="BtnPlus" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(140, 140)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "+
-"
-
-[node name="BtnMinus" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(140, 140)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "-"
+[node name="CurrentWorkers" type="Label" parent="."]
+offset_left = 2.0
+offset_top = -668.0
+offset_right = 289.0
+offset_bottom = -547.0
+theme_override_font_sizes/font_size = 86
+text = "0/10"

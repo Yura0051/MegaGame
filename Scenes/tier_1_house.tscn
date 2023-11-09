@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqmcifw4yb0ue"]
+[gd_scene load_steps=5 format=3 uid="uid://bqmcifw4yb0ue"]
 
 [ext_resource type="Texture2D" uid="uid://pcehs3ny4m2b" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/House.png" id="1_4eumi"]
 [ext_resource type="Texture2D" uid="uid://c7du5c854ec7v" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/CivilianFish.png" id="2_qo6ns"]
+[ext_resource type="PackedScene" uid="uid://ri6ccpx4oloa" path="res://Scenes/btn_plus_minus.tscn" id="3_vuk33"]
+[ext_resource type="Script" path="res://Scripts/house.gd" id="4_ligy6"]
 
 [node name="Tier1House" type="Node2D"]
 
@@ -19,26 +21,17 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_qo6ns")
 flip_h = true
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 736.0
-offset_top = -258.0
-offset_right = 882.0
-offset_bottom = 26.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
+[node name="BtnPlusMinus" parent="." instance=ExtResource("3_vuk33")]
+offset_left = 729.0
+offset_top = -285.0
+offset_right = 869.0
+offset_bottom = -1.0
 
-[node name="BtnPlus" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(140, 140)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "+
-"
-
-[node name="BtnMinus" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(140, 140)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-text = "-"
+[node name="CurrentWorkers" type="Label" parent="."]
+offset_left = 2.0
+offset_top = -573.0
+offset_right = 289.0
+offset_bottom = -452.0
+theme_override_font_sizes/font_size = 86
+text = "0/10"
+script = ExtResource("4_ligy6")

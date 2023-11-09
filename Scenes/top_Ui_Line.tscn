@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://clvgcjaji05yt"]
+
+[node name="TopUiLine" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.056
+offset_bottom = -0.288002
+grow_horizontal = 2
+
+[node name="HBoxTopPanel" type="HBoxContainer" parent="BgPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.972
+offset_bottom = 0.00799942
+grow_horizontal = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="HBoxFood" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="foodLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood"]
+layout_mode = 2
+text = "Еда:
+"
+
+[node name="foodValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood"]
+layout_mode = 2
+text = "0/100
+"
+
+[node name="HBoxWood" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="woodLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxWood"]
+layout_mode = 2
+text = " Дерево: 
+"
+
+[node name="woodValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxWood"]
+layout_mode = 2
+text = "0/100
+"
+
+[node name="HBoxStone" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="stoneLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxStone"]
+layout_mode = 2
+text = "Камень:"
+
+[node name="stoneValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxStone"]
+layout_mode = 2
+text = "0/100"
+
+[node name="HBoxPopulation" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="popLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxPopulation"]
+layout_mode = 2
+text = "Население:"
+
+[node name="popValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxPopulation"]
+layout_mode = 2
+text = "0/100"

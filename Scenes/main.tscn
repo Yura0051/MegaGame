@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5tiatkxnxjkx"]
+[gd_scene load_steps=7 format=3 uid="uid://c5tiatkxnxjkx"]
 
 [ext_resource type="Texture2D" uid="uid://bkbae7e0167d7" path="res://Arts/Bg.jpg" id="1_jghmy"]
-[ext_resource type="PackedScene" uid="uid://clvgcjaji05yt" path="res://Scenes/control.tscn" id="2_xk3w3"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_p0y6q"]
+[ext_resource type="PackedScene" uid="uid://clvgcjaji05yt" path="res://Scenes/top_Ui_Line.tscn" id="2_xk3w3"]
 [ext_resource type="PackedScene" uid="uid://bqmcifw4yb0ue" path="res://Scenes/tier_1_house.tscn" id="3_eplnn"]
 [ext_resource type="PackedScene" uid="uid://cqwqyr7uyjmgj" path="res://Scenes/tier_1_library.tscn" id="4_ksd8e"]
 [ext_resource type="PackedScene" uid="uid://35bujcmcyjjw" path="res://Scenes/tier_1_engineer.tscn" id="4_pir7c"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_p0y6q")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -21,7 +23,7 @@ grow_vertical = 2
 texture = ExtResource("1_jghmy")
 expand_mode = 1
 
-[node name="TopPanel" parent="CanvasLayer" instance=ExtResource("2_xk3w3")]
+[node name="TopUiLine" parent="CanvasLayer" instance=ExtResource("2_xk3w3")]
 
 [node name="Tier1House" parent="CanvasLayer" instance=ExtResource("3_eplnn")]
 position = Vector2(944, 403)
