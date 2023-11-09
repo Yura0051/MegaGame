@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqmcifw4yb0ue"]
+
+[ext_resource type="Texture2D" uid="uid://pcehs3ny4m2b" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/House.png" id="1_4eumi"]
+[ext_resource type="Texture2D" uid="uid://c7du5c854ec7v" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/CivilianFish.png" id="2_qo6ns"]
+
+[node name="Tier1House" type="Node2D"]
+
+[node name="House" type="Sprite2D" parent="."]
+texture = ExtResource("1_4eumi")
+
+[node name="Fish1" type="Sprite2D" parent="."]
+position = Vector2(-527, 324)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_qo6ns")
+
+[node name="Fish2" type="Sprite2D" parent="."]
+position = Vector2(-394, 305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_qo6ns")
+flip_h = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 736.0
+offset_top = -258.0
+offset_right = 882.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="BtnPlus" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "+
+"
+
+[node name="BtnMinus" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "-"
