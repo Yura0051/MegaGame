@@ -73,3 +73,18 @@ text = "Население:"
 [node name="popValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxPopulation"]
 layout_mode = 2
 text = "0/100"
+
+[node name="BtnMenu" type="Button" parent="BgPanel"]
+offset_right = 73.0
+offset_bottom = 36.0
+text = "Menu"
+
+[node name="Technologies" type="Button" parent="BgPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -109.0
+offset_bottom = 36.0
+grow_horizontal = 0
+text = "Technologies"

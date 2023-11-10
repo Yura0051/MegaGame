@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmkhm1p6l3imf"]
+
+[ext_resource type="Script" path="res://Scripts/base_build.gd" id="1_5f6ok"]
+[ext_resource type="PackedScene" uid="uid://ri6ccpx4oloa" path="res://Scenes/btn_plus_minus.tscn" id="1_id2lg"]
+
+[node name="BaseBuild" type="Node2D"]
+script = ExtResource("1_5f6ok")
+
+[node name="BtnPlusMinus" parent="." instance=ExtResource("1_id2lg")]
+offset_left = 568.0
+offset_top = 129.0
+offset_right = 708.0
+offset_bottom = 413.0
+
+[node name="CurrentWorkers" type="Label" parent="."]
+offset_left = -88.0
+offset_top = -121.0
+offset_right = 93.0
+theme_override_font_sizes/font_size = 86
+text = "0/10"

@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://ri6ccpx4oloa"]
+[gd_scene load_steps=4 format=3 uid="uid://ri6ccpx4oloa"]
+
+[ext_resource type="Script" path="res://Scripts/btn_plus_minus.gd" id="1_vf4ra"]
+[ext_resource type="Texture2D" uid="uid://bpy4mkh8i63v5" path="res://Arts/plusSign.png" id="2_q66k3"]
+[ext_resource type="Texture2D" uid="uid://dmu1vfq7bdtu5" path="res://Arts/minusSign.png" id="3_m4aw3"]
 
 [node name="BtnPlusMinus" type="VBoxContainer"]
 modulate = Color(0.980392, 0.980392, 0.980392, 1)
@@ -8,18 +12,21 @@ offset_bottom = 284.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
+script = ExtResource("1_vf4ra")
 
-[node name="BtnPlus" type="Button" parent="."]
+[node name="BtnPlus" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "+
-"
+texture_normal = ExtResource("2_q66k3")
 
-[node name="BtnMinus" type="Button" parent="."]
+[node name="BtnMinus" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "-"
+texture_normal = ExtResource("3_m4aw3")
+
+[connection signal="pressed" from="BtnPlus" to="." method="_on_btn_plus_pressed"]
+[connection signal="pressed" from="BtnMinus" to="." method="_on_btn_minus_pressed"]

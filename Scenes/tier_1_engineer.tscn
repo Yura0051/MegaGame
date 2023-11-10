@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cfcgj00cvgfh1" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/Engineer.png" id="1_1bj22"]
 [ext_resource type="Texture2D" uid="uid://c7du5c854ec7v" path="res://Arts/ancient-rome-people-landmarks-architecture-elements-pottery-isometric-set-with-colosseum-pantheon-triumphal-arch-isolated-vector-illustration/CivilianFish.png" id="2_57bix"]
-[ext_resource type="PackedScene" uid="uid://ri6ccpx4oloa" path="res://Scenes/btn_plus_minus.tscn" id="3_usknq"]
+[ext_resource type="PackedScene" uid="uid://dmkhm1p6l3imf" path="res://Scenes/base_build.tscn" id="3_w3qnq"]
 
 [node name="EngineerTier1" type="Node2D"]
 
@@ -20,16 +20,5 @@ scale = Vector2(0.192901, 0.192901)
 texture = ExtResource("2_57bix")
 flip_h = true
 
-[node name="BtnPlusMinus" parent="." instance=ExtResource("3_usknq")]
-offset_left = 648.0
-offset_top = -290.0
-offset_right = 788.0
-offset_bottom = -6.0
-
-[node name="CurrentWorkers" type="Label" parent="."]
-offset_left = 6.0
-offset_top = -682.0
-offset_right = 293.0
-offset_bottom = -561.0
-theme_override_font_sizes/font_size = 86
-text = "0/10"
+[node name="BaseBuild" parent="." instance=ExtResource("3_w3qnq")]
+position = Vector2(154, -680)
