@@ -6,6 +6,8 @@ var maxWorkers:int = 10
 
 var baseProdutionRate:float = 1
 
+var isBuilt = false
+
 func _ready():
 	var btnPlus = get_node("BtnPlusMinus")
 	
@@ -13,9 +15,11 @@ func _ready():
 	btnPlus.btn_minus_pressed.connect(changeWorkersAmount)
 	
 func changeWorkersAmount(value:int):
-	if currentWorkers + value > maxWorkers or currentWorkers + value < 0:
+	if currentWorkers + value > maxWorkers || currentWorkers + value < 0:
 		return
 	else:
 		currentWorkers+=value
 		$CurrentWorkers.set_text("%d/%d" %[currentWorkers, maxWorkers]) 
 	
+func produceGoods():
+	return baseProdutionRate * currentWorkers

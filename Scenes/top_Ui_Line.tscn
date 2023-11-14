@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://clvgcjaji05yt"]
+[gd_scene load_steps=2 format=3 uid="uid://clvgcjaji05yt"]
+
+[ext_resource type="Script" path="res://Scripts/top_Ui_Line.gd" id="1_ik8jq"]
 
 [node name="TopUiLine" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ik8jq")
 
 [node name="BgPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -31,10 +34,23 @@ layout_mode = 2
 
 [node name="foodLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood"]
 layout_mode = 2
-text = "Еда:
+text = "Валюта:
 "
 
 [node name="foodValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood"]
+layout_mode = 2
+text = "0/100
+"
+
+[node name="HBoxFood2" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="foodLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood2"]
+layout_mode = 2
+text = "Пища:
+"
+
+[node name="foodValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxFood2"]
 layout_mode = 2
 text = "0/100
 "
@@ -44,7 +60,7 @@ layout_mode = 2
 
 [node name="woodLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxWood"]
 layout_mode = 2
-text = " Дерево: 
+text = " Молотки: 
 "
 
 [node name="woodValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxWood"]
@@ -57,7 +73,7 @@ layout_mode = 2
 
 [node name="stoneLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxStone"]
 layout_mode = 2
-text = "Камень:"
+text = "Наука:"
 
 [node name="stoneValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxStone"]
 layout_mode = 2
@@ -74,7 +90,19 @@ text = "Население:"
 layout_mode = 2
 text = "0/100"
 
+[node name="HBoxPopulation2" type="HBoxContainer" parent="BgPanel/HBoxTopPanel"]
+layout_mode = 2
+
+[node name="popLabel" type="Label" parent="BgPanel/HBoxTopPanel/HBoxPopulation2"]
+layout_mode = 2
+text = "Армия:"
+
+[node name="popValue" type="Label" parent="BgPanel/HBoxTopPanel/HBoxPopulation2"]
+layout_mode = 2
+text = "0/100"
+
 [node name="BtnMenu" type="Button" parent="BgPanel"]
+layout_mode = 0
 offset_right = 73.0
 offset_bottom = 36.0
 text = "Menu"
@@ -88,3 +116,5 @@ offset_left = -109.0
 offset_bottom = 36.0
 grow_horizontal = 0
 text = "Technologies"
+
+[connection signal="pressed" from="BgPanel/BtnMenu" to="." method="_on_btn_menu_pressed"]

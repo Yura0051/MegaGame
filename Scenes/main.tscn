@@ -29,7 +29,7 @@ z_index = 1
 position = Vector2(1451.8, 686.4)
 scale = Vector2(0.2, 0.2)
 
-[node name="EngineerTier1" parent="CanvasLayer" instance=ExtResource("4_pir7c")]
+[node name="Tier1Engineer" parent="CanvasLayer" instance=ExtResource("4_pir7c")]
 position = Vector2(918.8, 711.4)
 scale = Vector2(0.2, 0.2)
 
@@ -71,11 +71,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 52.0
+offset_left = 48.5
 offset_top = -26.0
-offset_right = 92.0
+offset_right = 92.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "1000"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer/BtnEndTurn" to="." method="_on_btn_end_turn_pressed"]
