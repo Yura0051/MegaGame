@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5tiatkxnxjkx"]
+[gd_scene load_steps=8 format=3 uid="uid://c5tiatkxnxjkx"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_casjs"]
 [ext_resource type="Texture2D" uid="uid://bkbae7e0167d7" path="res://Arts/Bg.jpg" id="1_jghmy"]
 [ext_resource type="PackedScene" uid="uid://clvgcjaji05yt" path="res://Scenes/top_Ui_Line.tscn" id="2_xk3w3"]
 [ext_resource type="PackedScene" uid="uid://bqmcifw4yb0ue" path="res://Scenes/tier_1_house.tscn" id="3_eplnn"]
+[ext_resource type="Script" path="res://Scenes/resource_manager.gd" id="3_qsu0c"]
 [ext_resource type="PackedScene" uid="uid://cqwqyr7uyjmgj" path="res://Scenes/tier_1_library.tscn" id="4_ksd8e"]
 [ext_resource type="PackedScene" uid="uid://35bujcmcyjjw" path="res://Scenes/tier_1_engineer.tscn" id="4_pir7c"]
 
@@ -11,31 +12,15 @@
 position = Vector2(0, 1)
 script = ExtResource("1_casjs")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Bg" type="TextureRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(960, 539)
+scale = Vector2(1, 0.9)
 texture = ExtResource("1_jghmy")
-expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_qsu0c")
 
 [node name="TopUiLine2" parent="CanvasLayer" instance=ExtResource("2_xk3w3")]
-
-[node name="Tier1House" parent="CanvasLayer" instance=ExtResource("3_eplnn")]
-z_index = 1
-position = Vector2(1451.8, 686.4)
-scale = Vector2(0.2, 0.2)
-
-[node name="Tier1Engineer" parent="CanvasLayer" instance=ExtResource("4_pir7c")]
-position = Vector2(918.8, 711.4)
-scale = Vector2(0.2, 0.2)
-
-[node name="Tier1Library" parent="CanvasLayer" instance=ExtResource("4_ksd8e")]
-position = Vector2(459.8, 677.4)
-scale = Vector2(0.2, 0.2)
 
 [node name="BtnEndTurn" type="Button" parent="CanvasLayer"]
 anchors_preset = 3
@@ -78,5 +63,18 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "1000"
 horizontal_alignment = 2
+
+[node name="Tier1House" parent="CanvasLayer" instance=ExtResource("3_eplnn")]
+z_index = 1
+position = Vector2(1451.8, 686.4)
+scale = Vector2(0.2, 0.2)
+
+[node name="Tier1Engineer" parent="CanvasLayer" instance=ExtResource("4_pir7c")]
+position = Vector2(918.8, 711.4)
+scale = Vector2(0.2, 0.2)
+
+[node name="Tier1Library" parent="CanvasLayer" instance=ExtResource("4_ksd8e")]
+position = Vector2(459.8, 677.4)
+scale = Vector2(0.2, 0.2)
 
 [connection signal="pressed" from="CanvasLayer/BtnEndTurn" to="." method="_on_btn_end_turn_pressed"]
